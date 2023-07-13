@@ -1,0 +1,36 @@
+### REST Client : https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+### /apiTest/signup
+# POST https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/apiTest/signup HTTP/1.1
+POST http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/apiTest/signup HTTP/1.1
+content-type: application/json
+
+{
+  "email": "leekeunsouk@gmail.com",
+  "password": "{{$dotenv TEST_PW01}}",
+  "firstName": "ks",
+  "lastName": "lee"
+}
+
+### /apiTest/login
+# POST https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/apiTest/login HTTP/1.1
+POST http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/apiTest/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "leekeunsouk@gmail.com",
+  "password": "{{$dotenv TEST_PW01}}"
+}
+
+### /apiTest/protected (token 확인 테스트 샘플)
+### login / signup 후의 응답값 "accessToken" 사용
+### Authorization: Bearer "accessToken 값"
+# GET https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/apiTest/protected HTTP/1.1
+GET http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/apiTest/protected HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJaNEt2UTg5NEgzZkk2bVhZUGN2NmlhNVR1Q1oyIiwiaWF0IjoxNjg4OTYwMDI4LCJleHAiOjE2ODkwNDY0Mjh9.BBi_DwFlOGAwQPa_4uEwbqicRt_V94Qhqhg2L0v9sH4
+
+### /apiTest/logout
+# GET https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/apiTest/logout HTTP/1.1
+GET http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/apiTest/logout HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJaNEt2UTg5NEgzZkk2bVhZUGN2NmlhNVR1Q1oyIiwiaWF0IjoxNjg4OTYwMDI4LCJleHAiOjE2ODkwNDY0Mjh9.BBi_DwFlOGAwQPa_4uEwbqicRt_V94Qhqhg2L0v9sH4
+

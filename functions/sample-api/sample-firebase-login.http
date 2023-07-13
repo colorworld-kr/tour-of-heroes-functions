@@ -1,0 +1,12 @@
+### REST Client : https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+### /api/loginTest
+# POST https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/loginTest HTTP/1.1
+POST http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/loginTest HTTP/1.1
+content-type: application/json
+
+{
+  "email": "leekeunsouk@gmail.com",
+  "password": "{{$dotenv TEST_PW01}}"
+}
