@@ -8,9 +8,11 @@
  */
 
 const { helloWorld, addmessage, makeuppercase } = require('./sample-api/sample-simple');
+const { mysqlConnectTest } = require('./sample-api/sample-mysql-connection');
 
 exports.helloWorld = helloWorld;
 exports.addmessage = addmessage;
 exports.makeuppercase = makeuppercase;
 
+exports.mysqlConnectTest = mysqlConnectTest;
 

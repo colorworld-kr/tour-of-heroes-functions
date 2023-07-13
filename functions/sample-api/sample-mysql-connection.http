@@ -1,0 +1,7 @@
+### REST Client : https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+
+
+### /mysqlConnectTest
+# POST https://us-central1-tour-of-heroes-leekeunsouk.cloudfunctions.net/mysqlConnectTest HTTP/1.1
+GET http://127.0.0.1:5001/tour-of-heroes-leekeunsouk/us-central1/mysqlConnectTest HTTP/1.1
+
