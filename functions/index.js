@@ -7,13 +7,10 @@
  * See a full list of supported triggers at https://firebase.google.com/docs/functions
  */
 
-const {onRequest} = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const { helloWorld, addmessage, makeuppercase } = require('./sample-api/sample-simple');
 
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
+exports.helloWorld = helloWorld;
+exports.addmessage = addmessage;
+exports.makeuppercase = makeuppercase;
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
