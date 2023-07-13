@@ -10,6 +10,7 @@
 const { helloWorld, addmessage, makeuppercase } = require('./sample-api/sample-simple');
 const { mysqlConnectTest } = require('./sample-api/sample-mysql-connection');
 const { api: apiTest } = require('./sample-api/sample-firebase-auth');
+const { login: loginTest, logout: logoutTest } = require('./sample-api/sample-firebase-login');
 
 exports.helloWorld = helloWorld;
 exports.addmessage = addmessage;
@@ -17,4 +18,6 @@ exports.makeuppercase = makeuppercase;
 
 exports.mysqlConnectTest = mysqlConnectTest;
 exports.apiTest = apiTest;
+exports.loginTest = loginTest;
+exports.logoutTest = logoutTest;
 
